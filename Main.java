@@ -15,12 +15,27 @@ public class Main {
         s = new Scanner(f);
         int company = s.nextInt();
         int maxDogs = s.nextInt();
-        DogWalker walker = new DogWalker(maxDogs, companies[company]);
+        DogWalker[] walkers = new DogWalker[100];
+        for (byte i = 0; i < 100; i++) {
+            walkers[i] = new DogWalker(maxDogs, companies[s.nextInt()]);
+        }
 
         int startHour = s.nextInt();
         int endHour = s.nextInt();
-        int pay = walker.dogWalkShift(startHour, endHour);
-        System.out.println(pay);
+        int pay[] = new int[100];
+        for (byte i = 0; i < 100; i++) {
+            pay[i] = walkers[i].dogWalkShift(startHour, endHour);
+            startHour = s.nextInt();
+            endHour = s.nextInt();
+
+        }
+
+        int sum = 0;
+
+        for (int number : pay) {
+            sum += number; // Adds each item to the running total
+        }
+        System.out.println(sum);
 
     }
 }
