@@ -30,12 +30,12 @@ public class Main {
 
         }
 
-        int sum = 0;
+        int sumWalker = 0;
 
         for (int number : pay) {
-            sum += number; // Adds each item to the running total
+            sumWalker += number;
         }
-        System.out.println(sum);
+        System.out.println(sumWalker);
 
     }
 }
