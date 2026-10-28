@@ -17,8 +17,8 @@ public class Main {
         int[] pay = new int[100];
 
         for (int i = 0; i < 100; i++) {
-            int maxDogs = s.nextInt();
             int company = s.nextInt();
+            int maxDogs = s.nextInt();
             int startHour = s.nextInt();
             int endHour = s.nextInt();
 
